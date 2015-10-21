@@ -1,8 +1,16 @@
-from malleefowl.process import WPSProcess
+"""
+Example for a WPS Process implemented with PyWPS.
 
-from malleefowl import wpslogging as logging
+http://pywps.wald.intevation.org/documentation/course/process/index.html
+http://birdhouse.readthedocs.org/en/latest/dev_guide.html
+"""
+
+import os
+
+from pywps.Process import WPSProcess
+
+import logging
 logger = logging.getLogger(__name__)
-
 
 class WordCountProcess(WPSProcess):
     """
@@ -16,13 +24,14 @@ class WordCountProcess(WPSProcess):
             version = "1.0",
             metadata = [],
             abstract="Counts words in a given text ...",
+            storeSupported = True,
+            statusSupported = True,
             )
 
         self.text = self.addComplexInput(
             identifier = "text",
             title = "Text document",
             abstract = "URL of text document",
-            metadata=[],
             minOccurs=1,
             maxOccurs=1,
             formats=[{"mimeType":"text/plain"}],
@@ -32,13 +41,12 @@ class WordCountProcess(WPSProcess):
         self.output = self.addComplexOutput(
             identifier = "output",
             title = "Word count result",
-            metadata=[],
             formats=[{"mimeType":"text/plain"}],
             asReference=True,
             )
                                            
     def execute(self):
-        self.show_status("Starting ...", 1)
+        self.status.set(msg="Starting ...", percentDone=0, propagate=True)
 
         import re
         wordre = re.compile(r'\w+')
@@ -54,12 +62,12 @@ class WordCountProcess(WPSProcess):
             from collections import Counter
             counts = Counter(words(fin))
             sorted_counts = sorted([(v,k) for (k,v) in counts.items()], reverse=True)
-            logger.debug('words counted')
-            outfile = self.mktempfile(suffix='.txt')
+            import tempfile
+            (_, outfile) = tempfile.mkstemp(dir=os.path.abspath(os.curdir), suffix='.txt')
             with open(outfile, 'w') as fout:
-                logger.debug('writing to %s', outfile)
+                logger.info('writing to %s', outfile)
                 fout.write( str(sorted_counts) )
                 self.output.setValue( fout.name )
 
-        self.show_status("Done", 100)
+        self.status.set(msg="Done", percentDone=100, propagate=True)
 
