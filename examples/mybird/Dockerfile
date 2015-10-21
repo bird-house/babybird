@@ -2,7 +2,7 @@
 FROM birdhouse/bird-base:latest
 MAINTAINER https://github.com/bird-house
 
-LABEL Description="Emu Web Processing Service Application" Vendor="Birdhouse" Version="0.2.1"
+LABEL Description="MyBird Web Processing Services" Vendor="Birdhouse" Version="1.0.0"
 
 # Configure hostname and user for services 
 ENV HOSTNAME localhost
