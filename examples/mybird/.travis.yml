@@ -1,0 +1,14 @@
+language: python
+branches:
+  only:
+    - develop
+    - master
+python:
+  - "2.7"
+sudo: false
+install:
+  - make install
+script:
+  - make test
+#after_success:
+# - coveralls

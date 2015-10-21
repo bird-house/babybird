@@ -1,0 +1,8 @@
+[buildout]
+
+extends = buildout.cfg
+
+[settings]
+hostname = localhost
+http-port = 38101
+log-level = WARN
