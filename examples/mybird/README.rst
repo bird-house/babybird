@@ -13,14 +13,18 @@ It uses Buildout to setup the complete installation with Nginx (Web Server), Gun
 Installation
 ============
 
-MyBird is installed like all Birdhouse components (http://birdhouse.readthedocs.org/en/latest/installation.html)::
+MyBird is installed like all Birdhouse components (http://birdhouse.readthedocs.org/en/latest/installation.html):
+
+.. code-block:: sh
 
     $ https://github.com/bird-house/babybird.git
     $ cd babybird/examples/mybird
     $ make install
     $ make start
     
-See if *mybird* is running::
+See if *mybird* is running:
+
+.. code-block:: sh
 
     $ make status
     Supervisor status ...
@@ -36,7 +40,9 @@ By default MyBird is accessible at the URL::
 Configuration
 =============
 
-Edit ``custom.cfg`` to change default settings::
+Edit ``custom.cfg`` to change default settings:
+
+.. code-block:: sh
 
     $ vim custom.cfg
     $ cat custom.cfg
@@ -44,7 +50,9 @@ Edit ``custom.cfg`` to change default settings::
     hostname = localhost
     http-port = 38101
 
-After these changes run::
+After these changes run:
+
+.. code-block:: sh
 
     $ make update
     $ make restart
@@ -54,12 +62,14 @@ Example Usage with Birdy
 ========================
 
 Install the Birdy WPS commandline client:
-.. code:: bash
+
+.. code-block:: sh
 
     $ conda install -c birdhouse birdhouse-birdy
 
 Set the WPS service and run the birdy:
-.. code:: bash
+
+.. code-block:: sh
 
     $ export WPS_SERVICE=http://localhost:38101/wps
     $ birdy -h
