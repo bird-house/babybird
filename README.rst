@@ -5,7 +5,7 @@ Baby Bird
 Baby Bird
     *A minimal Bird (WPS) to get started with Web Processing Services.*
     
-**Baby Bird is no obsolet**. Please use the cookiecutter *Bird Maker*:
+**Baby Bird is now obsolet**. Please use the cookiecutter *Bird Maker*:
 https://github.com/bird-house/cookiecutter-birdhouse
 
 
