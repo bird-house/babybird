@@ -1,15 +1,35 @@
-=========
-Baby Bird
-=========
+Babybird
+===============================
 
-Baby Bird
-    *A minimal Bird (WPS) to get started with Web Processing Services.*
-    
-**Baby Bird is now obsolet**. Please use the cookiecutter *Bird Maker*:
-https://github.com/bird-house/cookiecutter-birdhouse
+.. image:: https://img.shields.io/badge/docs-latest-brightgreen.svg
+   :target: http://babybird.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. image:: https://travis-ci.org/bird-house/babybird.svg?branch=master
+   :target: https://travis-ci.org/bird-house/babybird
+   :alt: Travis Build
+
+.. image:: https://img.shields.io/github/license/bird-house/babybird.svg
+    :target: https://github.com/bird-house/babybird/blob/master/LICENSE.txt
+    :alt: GitHub license
+
+.. image:: https://badges.gitter.im/bird-house/birdhouse.svg
+    :target: https://gitter.im/bird-house/birdhouse?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+    :alt: Join the chat at https://gitter.im/bird-house/birdhouse
 
 
-Baby Bird has an example of a WPS with minimal dependencies (PyWPS, buildout, an example process, ...). It provides also a skeleton function to create a new *Bird* from scratch with some configurations (title, version, port, ...).
+Babybird (the bird)
+  *Babybird is a bird ...*
 
+A Web Processing Service for Climate Data Analysis.
 
+* Free software: Apache Software License 2.0
+* Documentation: https://babybird.readthedocs.io.
 
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `bird-house/cookiecutter-birdhouse`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`bird-house/cookiecutter-birdhouse`: https://github.com/bird-house/cookiecutter-birdhouse

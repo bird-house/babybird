@@ -1,9 +1,7 @@
 Changes
 *******
 
-0.1.0 (2015-10-dd)
+0.1.0 (2018-05-25)
 ==================
 
-Initial Release
-
-
+* First release.
