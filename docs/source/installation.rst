@@ -37,7 +37,7 @@ We provide also a ``Makefile`` to run this installation without additional steps
    $ make install  # installs Conda if necessary and runs the above installation steps
 
 Start Babybird PyWPS service
-+===========================
+----------------------------
 
 After successful installation you can start the service using the ``babybird`` command-line.
 
@@ -65,12 +65,12 @@ Check the log files for errors:
    $ tail -f  pywps.log
 
 Run Babybird as Docker container
-+===============================
+--------------------------------
 
 You can also run Babybird as a Docker container, see the :ref:`Tutorial <tutorial>`.
 
 Use Ansible to deploy Babybird on your System
-+============================================
+---------------------------------------------
 
 Use the `Ansible playbook`_ for PyWPS to deploy Babybird on your system.
 Follow the `example`_ for Babybird given in the playbook.
