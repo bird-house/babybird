@@ -24,14 +24,14 @@ classifiers = [
     'Natural Language :: English',
     "Programming Language :: Python :: 2",
     'Programming Language :: Python :: 2.7',
-    # 'Programming Language :: Python :: 3',
-    # 'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.6',
     'Topic :: Scientific/Engineering :: Atmospheric Science',
     'License :: OSI Approved :: Apache Software License',
 ]
 
 setup(name='babybird',
-      version='0.1.0',
+      version=version,
       description="A Web Processing Service for Climate Data Analysis.",
       long_description=README + '\n\n' + CHANGES,
       author="Full Name",
@@ -47,5 +47,5 @@ setup(name='babybird',
       install_requires=reqs,
       entry_points={
           'console_scripts': [
-             'babybird=babybird:cli',
+             'babybird=babybird.cli:cli',
           ]},)

@@ -6,7 +6,9 @@ Installation
 Install from Anaconda
 ---------------------
 
-.. TODO:: Prepare Conda package.
+.. todo::
+
+   Prepare Conda package.
 
 Install from GitHub
 -------------------
@@ -21,8 +23,8 @@ Check out code from the Babybird GitHub repo and start the installation:
    $ source activate babybird
    $ python setup.py develop
 
-Install the lazy way
---------------------
+... or do it the lazy way
++++++++++++++++++++++++++
 
 The previous installation instructions assume you have Anaconda installed.
 We provide also a ``Makefile`` to run this installation without additional steps:
@@ -35,7 +37,7 @@ We provide also a ``Makefile`` to run this installation without additional steps
    $ make install  # installs Conda if necessary and runs the above installation steps
 
 Start Babybird PyWPS service
------------------------
++===========================
 
 After successful installation you can start the service using the ``babybird`` command-line.
 
@@ -63,15 +65,24 @@ Check the log files for errors:
    $ tail -f  pywps.log
 
 Run Babybird as Docker container
----------------------------
++===============================
 
 You can also run Babybird as a Docker container, see the :ref:`Tutorial <tutorial>`.
 
 Use Ansible to deploy Babybird on your System
-----------------------------------------
++============================================
 
 Use the `Ansible playbook`_ for PyWPS to deploy Babybird on your system.
 Follow the `example`_ for Babybird given in the playbook.
+
+Building the docs
+-----------------
+
+First install dependencies for the documentation::
+
+  $ make bootstrap_dev
+  $ make docs
+
 
 .. _Ansible playbook: http://ansible-wps-playbook.readthedocs.io/en/latest/index.html
 .. _example: http://ansible-wps-playbook.readthedocs.io/en/latest/tutorial.html
