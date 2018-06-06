@@ -42,8 +42,6 @@ setup(name='babybird',
       keywords='wps pywps birdhouse babybird',
       packages=find_packages(),
       include_package_data=True,
-      zip_safe=False,
-      test_suite='babybird',
       install_requires=reqs,
       entry_points={
           'console_scripts': [

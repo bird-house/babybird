@@ -44,11 +44,11 @@ After successful installation you can start the service using the ``babybird`` c
 .. code-block:: sh
 
    $ babybird --help # show help
-   $ babybird        # start service with default configuration
+   $ babybird start  # start service with default configuration
 
    OR
 
-   $ babybird --daemon # start service as daemon
+   $ babybird start --daemon # start service as daemon
    loading configuration
    forked process id: 42
 
@@ -63,6 +63,19 @@ Check the log files for errors:
 .. code-block:: sh
 
    $ tail -f  pywps.log
+
+... or do it the lazy way
++++++++++++++++++++++++++
+
+You can also use the ``Makefile`` to start and stop the service:
+
+.. code-block:: sh
+
+  $ make start
+  $ make status
+  $ tail -f pywps.log
+  $ make stop
+
 
 Run Babybird as Docker container
 --------------------------------

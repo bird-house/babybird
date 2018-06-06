@@ -9,13 +9,13 @@ Command-line options
 You can overwrite the default `PyWPS`_ configuration by using command-line options.
 See the Babybird help which options are available::
 
-    $ babybird --help
+    $ babybird start --help
     --hostname HOSTNAME        hostname in PyWPS configuration.
     --port PORT                port in PyWPS configuration.
 
 Start service with different hostname and port::
 
-    $ babybird --hostname localhost --port 5001
+    $ babybird start --hostname localhost --port 5001
 
 Use a custom configuration file
 -------------------------------
@@ -43,7 +43,7 @@ Start the service with your custom configuration:
 .. code-block:: sh
 
    # start the service with this configuration
-   $ babybird -c etc/custom.cfg
+   $ babybird start -c etc/custom.cfg
 
 
 .. _PyWPS: http://pywps.org/
