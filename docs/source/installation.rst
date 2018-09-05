@@ -3,8 +3,8 @@
 Installation
 ============
 
-Install from Anaconda
----------------------
+Install from Conda
+------------------
 
 .. warning::
 
@@ -97,15 +97,6 @@ Use Ansible to deploy Babybird on your System
 ---------------------------------------------
 
 Use the `Ansible playbook`_ for PyWPS to deploy Babybird on your system.
-
-
-Building the docs
------------------
-
-First install dependencies for the documentation::
-
-  $ make bootstrap_dev
-  $ make docs
 
 
 .. _Ansible playbook: http://ansible-wps-playbook.readthedocs.io/en/latest/index.html
