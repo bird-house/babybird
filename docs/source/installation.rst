@@ -58,6 +58,13 @@ http://localhost:5000/wps?service=WPS&version=1.0.0&request=GetCapabilities.
 
 .. NOTE:: Remember the process ID (PID) so you can stop the service with ``kill PID``.
 
+You can find which process uses a given port using the following command (here for port 5000):
+
+.. code-block:: sh
+
+   $ netstat -nlp | grep :5000
+
+
 Check the log files for errors:
 
 .. code-block:: sh
@@ -80,7 +87,7 @@ You can also use the ``Makefile`` to start and stop the service:
 Run Babybird as Docker container
 --------------------------------
 
-You can also run Babybird as a Docker container, see the :ref:`Tutorial <tutorial>`.
+You can also run Babybird as a Docker container.
 
 Use Ansible to deploy Babybird on your System
 ---------------------------------------------
@@ -98,4 +105,4 @@ First install dependencies for the documentation::
 
 
 .. _Ansible playbook: http://ansible-wps-playbook.readthedocs.io/en/latest/index.html
-.. _example: http://ansible-wps-playbook.readthedocs.io/en/latest/tutorial.html
+.. _example: https://ansible-wps-playbook.readthedocs.io/en/latest/testing.html
