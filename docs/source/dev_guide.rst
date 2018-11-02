@@ -7,6 +7,8 @@ Developer Guide
     :local:
     :depth: 1
 
+.. WARNING:: To create new processes look at examples in Emu_.
+
 Building the docs
 -----------------
 
@@ -70,9 +72,11 @@ Make a new version of Babybird in the following steps:
 * Dry Run: ``bumpversion --dry-run --verbose --new-version 0.8.1 patch``
 * Do it: ``bumpversion --new-version 0.8.1 patch``
 * ... or: ``bumpversion --new-version 0.9.0 minor``
-* Push it: ``git push --tags``
+* Push it: ``git push``
+* Push tag: ``git push --tags``
 
 See the bumpversion_ documentation for details.
 
 .. _bumpversion: https://pypi.org/project/bumpversion/
 .. _pytest: https://docs.pytest.org/en/latest/
+.. _Emu: https://github.com/bird-house/emu

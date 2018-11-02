@@ -7,23 +7,9 @@ Processes
     :local:
     :depth: 1
 
-Sleep
------
+Say Hello
+---------
 
-.. autoprocess:: babybird.processes.wps_sleep.Sleep
-   :docstring:
-   :skiplines: 1
-
-Wordcounter
------------
-
-.. autoprocess:: babybird.processes.wps_wordcounter.WordCounter
-   :docstring:
-   :skiplines: 1
-
-InOut
------
-
-.. autoprocess:: babybird.processes.wps_inout.InOut
+.. autoprocess:: babybird.processes.wps_say_hello.SayHello
    :docstring:
    :skiplines: 1
