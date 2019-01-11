@@ -48,5 +48,5 @@ setup(name='babybird',
       install_requires=reqs,
       entry_points={
           'console_scripts': [
-             'babybird=babybird.cli:cli',
+              'babybird=babybird.cli:cli',
           ]},)
