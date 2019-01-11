@@ -2,8 +2,6 @@
 
 """Top-level package for Babybird."""
 
-from .wsgi import application
+from .__version__ import __author__, __email__, __version__
 
-__author__ = """Full Name"""
-__email__ = 'your@email'
-__version__ = '0.1.0'
+from .wsgi import application

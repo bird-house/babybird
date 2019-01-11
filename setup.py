@@ -7,10 +7,13 @@ import os
 
 from setuptools import setup, find_packages
 
-version = __import__('babybird').__version__
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
+
+about = {}
+with open(os.path.join(here, 'babybird', '__version__.py'), 'r') as f:
+    exec(f.read(), about)
 
 reqs = [line.strip() for line in open('requirements.txt')]
 
@@ -31,11 +34,11 @@ classifiers = [
 ]
 
 setup(name='babybird',
-      version=version,
+      version=about['__version__'],
       description="A Web Processing Service for Climate Data Analysis.",
       long_description=README + '\n\n' + CHANGES,
-      author="Full Name",
-      author_email='your@email',
+      author=about['__author__'],
+      author_email=about['__email__'],
       url='https://github.com/bird-house/babybird',
       classifiers=classifiers,
       license="Apache Software License 2.0",
@@ -45,5 +48,5 @@ setup(name='babybird',
       install_requires=reqs,
       entry_points={
           'console_scripts': [
-             'babybird=babybird.cli:cli',
+              'babybird=babybird.cli:cli',
           ]},)
