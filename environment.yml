@@ -1,10 +1,13 @@
 name: babybird
 channels:
-- birdhouse
-- conda-forge
+#- conda-forge
 - defaults
 dependencies:
-- pywps=4.1
+#- pywps=4.2
 - jinja2
 - click
 - psutil
+# tests
+- pytest
+- pip:
+  - -e git+https://github.com/geopython/pywps@master#egg=pywps
